@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/anishbajpai91/soveryf/issues"
   },
-  "homepage": "https://github.com/anishbajpai91/soveryf#readme"
+  "homepage": "https://github.com/anishbajpai91/soveryf#readme",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "graph-data-structure": "^2.0.0"
+  }
 }
