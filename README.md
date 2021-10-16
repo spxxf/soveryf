@@ -1,3 +1,3 @@
 # soveryf
-HackRU fall 21
+HackRU F21
 Bus Stop Calculator
