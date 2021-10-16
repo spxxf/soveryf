@@ -1,3 +1,3 @@
 # soveryf
-HackRU F21
-Bus Stop Calculator
+HackRU fall 21
+Bus Stop Calculator using Google Maps api and Distance Matrix api
