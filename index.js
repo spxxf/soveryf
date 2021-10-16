@@ -53,7 +53,7 @@ x = new Array('RexB', 'H', 'C')
 busStops.addEdge('Allison Road Classrooms/Science Buildings', 'Hill Center', x)
 
 x = new Array('A', 'B')
-busStops.addEdge('Allison Road Classrooms/Science Buildings', 'Busch Student Center')
+busStops.addEdge('Allison Road Classrooms/Science Buildings', 'Busch Student Center', x)
 
 x = new Array('RexL')
 busStops.addEdge('Livingston Student Center', 'Red Oak Lane', x)
@@ -74,7 +74,7 @@ x = new Array('EE')
 busStops.addEdge('Socam', 'Student Activities Center', x)
 
 x = new Array('EE')
-busStops.addEdge('Socam', 'Red Oak Lane')
+busStops.addEdge('Socam', 'Red Oak Lane', x)
 
 x = new Array('EE', 'F')
 busStops.addEdge('Student Activities Center', 'College Ave Student Center', x)
@@ -104,7 +104,7 @@ x = new Array('RexL', 'LX', 'B')
 busStops.addEdge('Livingston Plaza', 'Livingston Student Center', x)
 
 x = new Array('B')
-busStops.addEdge('Busch Student Center', 'Livingston Plaza')
+busStops.addEdge('Busch Student Center', 'Livingston Plaza', x)
 
 x = new Array('H')
 busStops.addEdge('Busch Student Center', 'Allison Road Classrooms/Science Buildings', x)
@@ -113,7 +113,7 @@ x = new Array('A')
 busStops.addEdge('Busch Student Center', 'Werblin Recreation Center', x)
 
 x = new Array('LX')
-busStops.addEdge('Livingston Student Center', 'College Ave Student Center')
+busStops.addEdge('Livingston Student Center', 'College Ave Student Center', x)
 
 x = new Array('H')
 busStops.addEdge('Werblin Recreation Center', 'Busch Student Center', x)
@@ -127,4 +127,4 @@ busStops.addEdge('Stadium West Lot', 'College Ave Student Center', x)
 x = new Array('C', 'A')
 busStops.addEdge('Stadium West Lot', 'Hill Center', x)
 
-console.log(busStops.bfs())
+console.log(busStops.shortestPath('Red Oak Lane', 'Lipman Hall'))
