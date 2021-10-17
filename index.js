@@ -32,7 +32,7 @@ x = new Array('EE', 'F')
 busStops.addEdge('lipman hall', 'biel road', x)
 
 x = new Array('RexB', 'RexL')
-busStops.addEdge('lipman hall', '', x)
+busStops.addEdge('lipman hall', 'college hall', x)
 
 x = new Array('EE', 'F')
 busStops.addEdge('biel road', 'henderson', x)
@@ -144,17 +144,11 @@ source = source.toLowerCase();
 let destination = prompt("Where are you trying to go? ");
 destination = destination.toLowerCase();
 
-
-
-
 const zipcode = [
     '08901',
     '08854']
 
 let newdes = new Array(destination, 'New Brunswick').join(' ');
-
-
-
 
 distance.get(
     {
@@ -169,18 +163,9 @@ distance.get(
       const duration = parseInt(data.duration);
 
 
-      console.log("The distance of your trip is " + distance);
-      console.log("The duration of your trip is " + duration);
-
-
-
-
+      console.log("The distance of your trip is " + distance + " miles");
+      console.log("Your trip should take " + Math.ceil(duration * 1.8) + " to " + Math.ceil(duration * 2.2) + " minutes");
 });
 
-
-
-
-
-
-
 console.log(...busStops.shortestPath(source, destination))
+console.log("There will be " + busStops.shortestPath(source, destination).Stops + " stops.")
