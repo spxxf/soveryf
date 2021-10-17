@@ -18,6 +18,8 @@
   "homepage": "https://github.com/anishbajpai91/soveryf#readme",
   "dependencies": {
     "axios": "^0.23.0",
+    "google-distance": "^1.0.1",
+    "google-distance-matrix2": "^1.1.2",
     "graph-data-structure": "^2.0.0"
   }
 }

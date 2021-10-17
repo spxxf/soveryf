@@ -1,5 +1,11 @@
 const graph = require('graph-data-structure')
 const busStops = graph()
+const token = 'AIzaSyC6aOt8cIrLBCRg7KEdzBc3IdICjKTm8H4';
+
+var distance = require('google-distance');
+distance.apiKey = token;
+
+
 var x;
 busStops.addNode('Red Oak Lane')
 busStops.addNode('Lipman Hall')
@@ -14,7 +20,7 @@ busStops.addNode('Student Activities Center')
 busStops.addNode('Hill Center')
 busStops.addNode('Allison Road Classrooms/Science Buildings')
 busStops.addNode('Busch Student Center')
-busStops.addNode('Livingston Plaza')
+busStops.addNode('The Plaza at Livingston Campus')
 busStops.addNode('Livingston Student Center')
 busStops.addNode('Werblin Recreation Center')
 busStops.addNode('Stadium West Lot')
@@ -65,7 +71,7 @@ x = new Array('EE')
 busStops.addEdge('College Hall', 'Socam', x)
 
 x = new Array('RexL')
-busStops.addEdge('College Hall', 'Livingston Plaza', x)
+busStops.addEdge('College Hall', 'The Plaza at Livingston Campus', x)
 
 x = new Array('F')
 busStops.addEdge('College Hall', 'Student Activities Center', x)
@@ -80,7 +86,7 @@ x = new Array('EE', 'F')
 busStops.addEdge('Student Activities Center', 'College Ave Student Center', x)
 
 x = new Array('LX')
-busStops.addEdge('Student Activities Center', 'Livingstion Plaza', x)
+busStops.addEdge('Student Activities Center', 'The Plaza at Livingston Campus', x)
 
 x = new Array('H')
 busStops.addEdge('Student Activities Center', 'Werblin Recreation Center', x)
@@ -101,10 +107,10 @@ x = new Array('LX', 'H', 'A')
 busStops.addEdge('The Yard', 'Student Activities Center', x)
 
 x = new Array('RexL', 'LX', 'B')
-busStops.addEdge('Livingston Plaza', 'Livingston Student Center', x)
+busStops.addEdge('The Plaza at Livingston Campus', 'Livingston Student Center', x)
 
 x = new Array('B')
-busStops.addEdge('Busch Student Center', 'Livingston Plaza', x)
+busStops.addEdge('Busch Student Center', 'The Plaza at Livingston Campus', x)
 
 x = new Array('H')
 busStops.addEdge('Busch Student Center', 'Allison Road Classrooms/Science Buildings', x)
@@ -128,8 +134,28 @@ x = new Array('C', 'A')
 busStops.addEdge('Stadium West Lot', 'Hill Center', x)
 
 //CHANGE THESE VARIABLES WITH GOOGLE MAPS / GOOGLE DISTANCE API
-var source = 'Socam'
-var destination = 'Livingston Plaza'
+var source = 'Socam';
+var destination = 'The Plaza at Livingston Campus';
+
+
+
+
+
+distance.get(
+    {
+      origin: source,
+      destination: destination,
+      units: 'imperial',
+    },
+    function(err, data) {
+      if (err) return console.log(err);
+      console.log(data);
+});
+
+
+
+
+
 
 
 console.log(...busStops.shortestPath(source, destination))
