@@ -127,4 +127,9 @@ busStops.addEdge('Stadium West Lot', 'College Ave Student Center', x)
 x = new Array('C', 'A')
 busStops.addEdge('Stadium West Lot', 'Hill Center', x)
 
-console.log(busStops.shortestPath('Socam', 'Hill Center'))
+//CHANGE THESE VARIABLES WITH GOOGLE MAPS / GOOGLE DISTANCE API
+var source = 'Socam'
+var destination = 'Livingston Plaza'
+
+
+console.log(...busStops.shortestPath(source, destination))
