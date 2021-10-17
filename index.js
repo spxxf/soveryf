@@ -7,140 +7,142 @@ distance.apiKey = token;
 
 
 var x;
-busStops.addNode('Red Oak Lane')
-busStops.addNode('Lipman Hall')
-busStops.addNode('College Hall')
-busStops.addNode('Socam')
-busStops.addNode('Biel Road')
-busStops.addNode('Henderson')
-busStops.addNode('Gibbons')
-busStops.addNode('The Yard')
-busStops.addNode('College Ave Student Center')
-busStops.addNode('Student Activities Center')
-busStops.addNode('Hill Center')
-busStops.addNode('Allison Road Classrooms/Science Buildings')
-busStops.addNode('Busch Student Center')
-busStops.addNode('The Plaza at Livingston Campus')
-busStops.addNode('Livingston Student Center')
-busStops.addNode('Werblin Recreation Center')
-busStops.addNode('Stadium West Lot')
+busStops.addNode('red oak lane')
+busStops.addNode('lipman hall')
+busStops.addNode('college hall')
+busStops.addNode('socam')
+busStops.addNode('biel road')
+busStops.addNode('henderson')
+busStops.addNode('gibbons')
+busStops.addNode('the yard')
+busStops.addNode('college ave student center')
+busStops.addNode('student activities center')
+busStops.addNode('hill center')
+busStops.addNode('allison road classrooms/science buildings')
+busStops.addNode('busch student center')
+busStops.addNode('the plaza at livingston campus')
+busStops.addNode('livingston student center')
+busStops.addNode('werblin recreation center')
+busStops.addNode('stadium west lot')
 
 x = new Array('RexB', 'RexL', 'EE', 'F')
-busStops.addEdge('Red Oak Lane', 'Lipman Hall', x)
+busStops.addEdge('red oak lane', 'lipman hall', x)
 
 x = new Array('EE', 'F')
-busStops.addEdge('Lipman Hall', 'Biel Road', x)
+busStops.addEdge('lipman hall', 'biel road', x)
 
 x = new Array('RexB', 'RexL')
-busStops.addEdge('Lipman Hall', 'College Hall', x)
+busStops.addEdge('lipman hall', '', x)
 
 x = new Array('EE', 'F')
-busStops.addEdge('Biel Road', 'Henderson', x)
+busStops.addEdge('biel road', 'henderson', x)
 
 x = new Array('EE', 'F')
-busStops.addEdge('Henderson', 'Gibbons', x)
+busStops.addEdge('henderson', 'gibbons', x)
 
 x = new Array('EE', 'F')
-busStops.addEdge('Gibbons', 'College Hall', x)
+busStops.addEdge('gibbons', 'college hall', x)
 
 x = new Array('RexB')
-busStops.addEdge('College Hall', 'Hill Center', x)
+busStops.addEdge('college hall', 'hill center', x)
 
 x = new Array('RexB', 'A', 'C', 'B')
-busStops.addEdge('Hill Center', 'Allison Road Classrooms/Science Buildings', x)
+busStops.addEdge('hill center', 'allison road classrooms/science buildings', x)
 
 x = new Array('RexB')
-busStops.addEdge('Hill Center', 'Red Oak Lane', x)
+busStops.addEdge('hill center', 'red oak lane', x)
 
 x = new Array('H', 'C')
-busStops.addEdge('Hill Center', 'Stadium West Lot', x)
+busStops.addEdge('hill center', 'stadium west lot', x)
 
 x = new Array('RexB', 'H', 'C')
-busStops.addEdge('Allison Road Classrooms/Science Buildings', 'Hill Center', x)
+busStops.addEdge('allison road classrooms/science buildings', 'hill center', x)
 
 x = new Array('A', 'B')
-busStops.addEdge('Allison Road Classrooms/Science Buildings', 'Busch Student Center', x)
+busStops.addEdge('allison road classrooms/science buildings', 'busch student center', x)
 
 x = new Array('RexL')
-busStops.addEdge('Livingston Student Center', 'Red Oak Lane', x)
+busStops.addEdge('livingston student center', 'red oak lane', x)
 
 x = new Array('B')
-busStops.addEdge('Livingston Student Center', 'Hill Center', x)
+busStops.addEdge('livingston student center', 'hill center', x)
 
 x = new Array('EE')
-busStops.addEdge('College Hall', 'Socam', x)
+busStops.addEdge('college hall', 'socam', x)
 
 x = new Array('RexL')
-busStops.addEdge('College Hall', 'The Plaza at Livingston Campus', x)
+busStops.addEdge('college hall', 'the plaza at livingston campus', x)
 
 x = new Array('F')
-busStops.addEdge('College Hall', 'Student Activities Center', x)
+busStops.addEdge('college hall', 'student activities center', x)
 
 x = new Array('EE')
-busStops.addEdge('Socam', 'Student Activities Center', x)
+busStops.addEdge('socam', 'student activities center', x)
 
 x = new Array('EE')
-busStops.addEdge('Socam', 'Red Oak Lane', x)
+busStops.addEdge('socam', 'red oak lane', x)
 
 x = new Array('EE', 'F')
-busStops.addEdge('Student Activities Center', 'College Ave Student Center', x)
+busStops.addEdge('student activities center', 'college ave student center', x)
 
 x = new Array('LX')
-busStops.addEdge('Student Activities Center', 'The Plaza at Livingston Campus', x)
+busStops.addEdge('student activities center', 'the plaza at livingston campus', x)
 
 x = new Array('H')
-busStops.addEdge('Student Activities Center', 'Werblin Recreation Center', x)
+busStops.addEdge('student activities center', 'werblin recreation center', x)
 
 x = new Array('A')
-busStops.addEdge('Student Activities Center', 'Stadium West Lot', x)
+busStops.addEdge('student activities center', 'stadium west lot', x)
 
 x = new Array('EE', 'F', 'LX', 'A', 'H')
-busStops.addEdge('College Ave Student Center', 'The Yard', x)
+busStops.addEdge('college ave student center', 'the yard', x)
 
 x = new Array('EE')
-busStops.addEdge('The Yard', 'Socam', x)
+busStops.addEdge('the yard', 'socam', x)
 
 x = new Array('F')
-busStops.addEdge('The Yard', 'Red Oak Lane', x)
+busStops.addEdge('the yard', 'red oak lane', x)
 
 x = new Array('LX', 'H', 'A')
-busStops.addEdge('The Yard', 'Student Activities Center', x)
+busStops.addEdge('the yard', 'student activities center', x)
 
 x = new Array('RexL', 'LX', 'B')
-busStops.addEdge('The Plaza at Livingston Campus', 'Livingston Student Center', x)
+busStops.addEdge('the plaza at livingston campus', 'livingston student center', x)
 
 x = new Array('B')
-busStops.addEdge('Busch Student Center', 'The Plaza at Livingston Campus', x)
+busStops.addEdge('busch student center', 'the plaza at livingston campus', x)
 
 x = new Array('H')
-busStops.addEdge('Busch Student Center', 'Allison Road Classrooms/Science Buildings', x)
+busStops.addEdge('busch student center', 'allison road classrooms/science buildings', x)
 
 x = new Array('A')
-busStops.addEdge('Busch Student Center', 'Werblin Recreation Center', x)
+busStops.addEdge('busch student center', 'werblin recreation center', x)
 
 x = new Array('LX')
-busStops.addEdge('Livingston Student Center', 'College Ave Student Center', x)
+busStops.addEdge('livingston student center', 'college ave student center', x)
 
 x = new Array('H')
-busStops.addEdge('Werblin Recreation Center', 'Busch Student Center', x)
+busStops.addEdge('werblin recreation center', 'busch student center', x)
 
 x = new Array('A')
-busStops.addEdge('Werblin Recreation Center', 'College Ave Student Center', x)
+busStops.addEdge('werblin recreation center', 'college ave student center', x)
 
 x = new Array('H')
-busStops.addEdge('Stadium West Lot', 'College Ave Student Center', x)
+busStops.addEdge('stadium west lot', 'college ave student center', x)
 
 x = new Array('C', 'A')
-busStops.addEdge('Stadium West Lot', 'Hill Center', x)
+busStops.addEdge('stadium west lot', 'hill center', x)
 
 //CHANGE THESE VARIABLES WITH GOOGLE MAPS / GOOGLE DISTANCE API
-// var source = 'Socam';
-// var destination = 'The Plaza at Livingston Campus';
+// var source = 'socam';
+// var destination = 'the plaza at livingston campus';
 
 const prompt = require("prompt-sync")();
 
-const source = prompt("Where are you starting from?");
-const destination = prompt("Where are you trying to go?");
+let source = prompt("Where are you starting from?");
+source.toLowerCase();
+let destination = prompt("Where are you trying to go?");
+destination.toLowerCase();
 
 
 
