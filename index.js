@@ -20,7 +20,7 @@ busStops.addNode('student activities center')
 busStops.addNode('hill center')
 busStops.addNode('allison road classrooms/science buildings')
 busStops.addNode('busch student center')
-busStops.addNode('the plaza at livingston campus')
+busStops.addNode('livingston plaza')
 busStops.addNode('livingston student center')
 busStops.addNode('werblin recreation center')
 busStops.addNode('stadium west lot')
@@ -71,7 +71,7 @@ x = new Array('EE')
 busStops.addEdge('college hall', 'socam', x)
 
 x = new Array('RexL')
-busStops.addEdge('college hall', 'the plaza at livingston campus', x)
+busStops.addEdge('college hall', 'livingston plaza', x)
 
 x = new Array('F')
 busStops.addEdge('college hall', 'student activities center', x)
@@ -86,7 +86,7 @@ x = new Array('EE', 'F')
 busStops.addEdge('student activities center', 'college ave student center', x)
 
 x = new Array('LX')
-busStops.addEdge('student activities center', 'the plaza at livingston campus', x)
+busStops.addEdge('student activities center', 'livingston plaza', x)
 
 x = new Array('H')
 busStops.addEdge('student activities center', 'werblin recreation center', x)
@@ -107,10 +107,10 @@ x = new Array('LX', 'H', 'A')
 busStops.addEdge('the yard', 'student activities center', x)
 
 x = new Array('RexL', 'LX', 'B')
-busStops.addEdge('the plaza at livingston campus', 'livingston student center', x)
+busStops.addEdge('livingston plaza', 'livingston student center', x)
 
 x = new Array('B')
-busStops.addEdge('busch student center', 'the plaza at livingston campus', x)
+busStops.addEdge('busch student center', 'livingston plaza', x)
 
 x = new Array('H')
 busStops.addEdge('busch student center', 'allison road classrooms/science buildings', x)
@@ -135,15 +135,23 @@ busStops.addEdge('stadium west lot', 'hill center', x)
 
 //CHANGE THESE VARIABLES WITH GOOGLE MAPS / GOOGLE DISTANCE API
 // var source = 'socam';
-// var destination = 'the plaza at livingston campus';
+// var destination = 'livingston plaza';
 
 const prompt = require("prompt-sync")();
 
-let source = prompt("Where are you starting from?");
-source.toLowerCase();
-let destination = prompt("Where are you trying to go?");
-destination.toLowerCase();
+let source = prompt("Where are you starting from? ");
+source = source.toLowerCase();
+let destination = prompt("Where are you trying to go? ");
+destination = destination.toLowerCase();
 
+
+
+
+const zipcode = [
+    '08901',
+    '08854']
+
+let newdes = new Array(destination, 'New Brunswick').join(' ');
 
 
 
@@ -151,12 +159,22 @@ destination.toLowerCase();
 distance.get(
     {
       origin: source,
-      destination: destination,
+      destination: newdes,
       units: 'imperial',
     },
     function(err, data) {
       if (err) return console.log(err);
-      console.log(data);
+      // console.log(data);
+      const distance = parseFloat(data.distance);
+      const duration = parseInt(data.duration);
+
+
+      console.log("The distance of your trip is " + distance);
+      console.log("The duration of your trip is " + duration);
+
+
+
+
 });
 
 
