@@ -127,4 +127,4 @@ busStops.addEdge('Stadium West Lot', 'College Ave Student Center', x)
 x = new Array('C', 'A')
 busStops.addEdge('Stadium West Lot', 'Hill Center', x)
 
-console.log(busStops.shortestPath('Red Oak Lane', 'Lipman Hall'))
+console.log(busStops.shortestPath('Socam', 'Hill Center'))
