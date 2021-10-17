@@ -137,8 +137,10 @@ busStops.addEdge('Stadium West Lot', 'Hill Center', x)
 // var source = 'Socam';
 // var destination = 'The Plaza at Livingston Campus';
 
-var source = window.prompt("Where are you starting from?");
-var destination = window.prompt("Where are you trying to go?");
+const prompt = require("prompt-sync")();
+
+const source = prompt("Where are you starting from?");
+const destination = prompt("Where are you trying to go?");
 
 
 
