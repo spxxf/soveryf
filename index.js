@@ -134,10 +134,11 @@ x = new Array('C', 'A')
 busStops.addEdge('Stadium West Lot', 'Hill Center', x)
 
 //CHANGE THESE VARIABLES WITH GOOGLE MAPS / GOOGLE DISTANCE API
-var source = 'Socam';
-var destination = 'The Plaza at Livingston Campus';
+// var source = 'Socam';
+// var destination = 'The Plaza at Livingston Campus';
 
-
+var source = window.prompt("Where are you starting from?");
+var destination = window.prompt("Where are you trying to go?");
 
 
 
