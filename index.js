@@ -32,7 +32,7 @@ x = new Array('EE', 'F')
 busStops.addEdge('lipman hall', 'biel road', x)
 
 x = new Array('RexB', 'RexL')
-busStops.addEdge('lipman hall', '', x)
+busStops.addEdge('lipman hall', 'college hall', x)
 
 x = new Array('EE', 'F')
 busStops.addEdge('biel road', 'henderson', x)
