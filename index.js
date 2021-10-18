@@ -1,6 +1,8 @@
 const graph = require('graph-data-structure')
 const busStops = graph()
-const token = 'AIzaSyC6aOt8cIrLBCRg7KEdzBc3IdICjKTm8H4';
+require("dotenv").config();
+const google = process.env.token
+const token = google;
 
 var distance = require('google-distance');
 distance.apiKey = token;
